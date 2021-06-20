@@ -3,7 +3,7 @@ M117 Starting bed heat up
 M140 S{material_bed_temperature_layer_0}      ; Set Heat Bed temperature
 
 M117 Starting extruder heat up
-M104 S{material_print_temperature_layer_0}    ; Set Extruder temperature
+M104 S160                                     ; Set Extruder pre-heat temperature (not hot enough for ozzing)
 
 M117 Waiting for bed to heat up
 M190 S{material_bed_temperature_layer_0}      ; Wait for Heat Bed temperature
@@ -12,6 +12,7 @@ M117 Homing axes
 G28 ; home all axes
 G29 L1 ; Load the mesh stored in slot 1
 G29 J ; Probe 3 points to tilt mesh
+M104 S{material_print_temperature_layer_0}    ; Set Extruder temperature
 
 M117 Waiting for extruder to heat up
 M109 S{material_print_temperature_layer_0}    ; Wait for Extruder temperature
