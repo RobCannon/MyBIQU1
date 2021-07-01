@@ -1,5 +1,5 @@
 ; Based on https://www.reddit.com/r/BIGTREETECH/comments/j55rt3/biqub1_firmware_updating_bltouch_guide_a/
-M1960 S60        ; Heat bed to temperature.
+M140 S60         ; Heat bed to temperature.
 M851 Z0          ; Set Z-offset to zero so new offset can be calculated
 G28 Z            ; Home Z-axis.
 G1 Z0            ; Move to Z0 position.
