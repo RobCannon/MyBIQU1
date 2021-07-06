@@ -102,7 +102,7 @@
  *
  * :[-1, 0, 1, 2, 3, 4, 5, 6, 7]
  */
-#define SERIAL_PORT 1
+#define SERIAL_PORT 0
 
 /**
  * Select a secondary serial port on the board to use for communication with the host.
@@ -127,7 +127,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_BTT_SKR_V2_0
+  #define MOTHERBOARD BOARD_BTT_SKR_V1_4
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
@@ -1049,7 +1049,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 24, -37, -1.5 }
+#define NOZZLE_TO_PROBE_OFFSET { 24, -37, -2.20 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
@@ -1381,8 +1381,8 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-#define AUTO_BED_LEVELING_BILINEAR
-//#define AUTO_BED_LEVELING_UBL
+//#define AUTO_BED_LEVELING_BILINEAR
+#define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
 /**
@@ -1396,7 +1396,7 @@
 /**
  * Auto-leveling needs preheating
  */
-#define PREHEAT_BEFORE_LEVELING
+//#define PREHEAT_BEFORE_LEVELING
 #if ENABLED(PREHEAT_BEFORE_LEVELING)
   #define LEVELING_NOZZLE_TEMP 120   // (°C) Only applies to E0 at this time
   #define LEVELING_BED_TEMP     60
@@ -1431,7 +1431,7 @@
   #if ENABLED(G26_MESH_VALIDATION)
     #define MESH_TEST_NOZZLE_SIZE    0.4  // (mm) Diameter of primary nozzle.
     #define MESH_TEST_LAYER_HEIGHT   0.2  // (mm) Default layer height for G26.
-    #define MESH_TEST_HOTEND_TEMP  185    // (°C) Default nozzle temperature for G26.
+    #define MESH_TEST_HOTEND_TEMP  180    // (°C) Default nozzle temperature for G26.
     #define MESH_TEST_BED_TEMP      60    // (°C) Default bed temperature for G26.
     #define G26_XY_FEEDRATE         20    // (mm/s) Feedrate for G26 XY moves.
     #define G26_XY_FEEDRATE_TRAVEL 100    // (mm/s) Feedrate for G26 XY travel moves.
@@ -1514,7 +1514,7 @@
 #endif
 
 // Add a menu item to move between bed corners for manual bed adjustment
-//#define LEVEL_BED_CORNERS
+#define LEVEL_BED_CORNERS
 
 #if ENABLED(LEVEL_BED_CORNERS)
   #define LEVEL_CORNERS_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
@@ -1574,7 +1574,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing.
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT X_CENTER  // X point for Z homing

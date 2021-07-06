@@ -461,7 +461,7 @@
  * The fan turns on automatically whenever any driver is enabled and turns
  * off (or reduces to idle speed) shortly after drivers are turned off.
  */
-#define USE_CONTROLLER_FAN
+//#define USE_CONTROLLER_FAN
 #if ENABLED(USE_CONTROLLER_FAN)
   //#define CONTROLLER_FAN_PIN -1        // Set a custom pin for the controller fan
   //#define CONTROLLER_FAN_USE_Z_ONLY    // With this option only the Z axis is considered
@@ -878,7 +878,7 @@
 //
 // Add the G35 command to read bed corners to help adjust screws. Requires a bed probe.
 //
-#define ASSISTED_TRAMMING
+//#define ASSISTED_TRAMMING
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define positions for probe points.
@@ -893,7 +893,7 @@
   #define RESTORE_LEVELING_AFTER_G35    // Enable to restore leveling setup after operation
   //#define REPORT_TRAMMING_MM          // Report Z deviation (mm) for each point relative to the first
 
-  #define ASSISTED_TRAMMING_WIZARD    // Add a Tramming Wizard to the LCD menu
+  //#define ASSISTED_TRAMMING_WIZARD    // Add a Tramming Wizard to the LCD menu
 
   //#define ASSISTED_TRAMMING_WAIT_POSITION { X_CENTER, Y_CENTER, 30 } // Move the nozzle out of the way for adjustment
 
