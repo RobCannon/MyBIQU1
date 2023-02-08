@@ -1,1 +1,1 @@
-This is my configuration file for the BIQU branch of Marlin at https://github.com/bigtreetech/Marlin.git
+This is my configuration file for the Marline BIQU configuration at https://github.com/MarlinFirmware/Configurations/tree/bugfix-2.1.x/config/examples/BIQU/B1%20-%20SKR%201.4
